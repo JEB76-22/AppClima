@@ -1,129 +1,106 @@
 # ☀️ AppClima
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1200&q=80" alt="Weather banner" width="100%" />
+  <strong>El clima de tu ciudad, de un vistazo.</strong><br />
+  Consulta la temperatura actual, máxima y mínima con una experiencia sencilla y visual.
 </p>
 
 <p align="center">
-  <img alt="GitHub last commit" src="https://img.shields.io/badge/Project-Weather%20App-blue?style=for-the-badge" />
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge" />
-  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-Responsive-orange?style=for-the-badge" />
-  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-Modern-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge" alt="OpenWeatherMap API" />
 </p>
 
-Aplicación web moderna para consultar el clima en tiempo real de cualquier ciudad, con una interfaz simple, elegante y funcional.
+## 🌦️ Demo
 
-## 🌤️ Descripción
+<p align="center">
+  <img src="./clima.PNG" alt="Captura de pantalla de AppClima mostrando el clima de Barcelona" width="720" />
+</p>
 
-AppClima es un proyecto frontend desarrollado con JavaScript vanilla que permite:
+> La imagen muestra una consulta de ejemplo. Para probar la aplicación, ejecútala localmente siguiendo los pasos de abajo.
 
-- 🔍 buscar una ciudad por nombre
-- 🌍 seleccionar el país correspondiente
-- 🌡️ mostrar temperatura actual, mínima y máxima
-- ⚠️ validar entradas vacías y errores del usuario
-- ⏳ mostrar una animación de carga mientras se consulta la API
+## ✨ Funcionalidades
 
-Ideal para practicar consumo de APIs, manipulación del DOM y diseño responsive.
+- 🔎 Busca una ciudad y selecciona su país.
+- 🌡️ Consulta la temperatura actual, máxima y mínima en grados Celsius.
+- ⏳ Muestra un indicador de carga durante la consulta.
+- ✅ Valida que se hayan completado la ciudad y el país.
+- 🌍 Incluye opciones de países de América y Europa.
 
-## ✨ Características
+## 🧰 Tecnologías
 
-- Interfaz limpia y moderna
-- Diseño con gradientes y estilo visual atractivo
-- Búsqueda de clima en tiempo real
-- Filtro por país
-- Manejo de errores y validación de formularios
-- Compatible con navegador moderno
+| Tecnología | Uso |
+| --- | --- |
+| HTML5 | Estructura de la aplicación |
+| CSS3 y Tailwind CSS | Estilos e interfaz |
+| JavaScript | Validación, solicitudes y actualización de la página |
+| OpenWeatherMap API | Geocodificación y datos meteorológicos |
 
-## 🧩 Tecnologías utilizadas
+## 🚀 Cómo ejecutarlo
 
-- HTML5
-- CSS3
-- JavaScript
-- Tailwind CSS
-- OpenWeatherMap API
+### Requisitos
 
-## 📁 Estructura del proyecto
+- Un navegador web moderno.
+- Conexión a Internet.
+- Una API key de [OpenWeatherMap](https://openweathermap.org/api).
+- Node.js y npm para la opción de servidor local.
+
+### Pasos
+
+1. Clona el repositorio y entra en su carpeta:
+
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd AppClima
+   ```
+
+2. Configura tu API key de OpenWeatherMap en `js/app.js`.
+3. Inicia un servidor local:
+
+   ```bash
+   npx serve . -l 8000
+   ```
+
+4. Abre [http://localhost:8000](http://localhost:8000) en tu navegador.
+
+También puedes abrir `index.html` directamente, aunque se recomienda utilizar un servidor local.
+
+## 🗺️ Cómo usarlo
+
+1. Escribe el nombre de una ciudad.
+2. Selecciona el país correspondiente.
+3. Pulsa **Obtener Clima**.
+4. Consulta la temperatura actual, máxima y mínima.
+
+## 🔑 API key
+
+La aplicación utiliza la API de OpenWeatherMap para encontrar las coordenadas de la ciudad y consultar sus condiciones meteorológicas. Configura tu propia clave en `js/app.js` antes de usarla.
+
+Como el código JavaScript del navegador es público, no uses una clave privada o sensible ni subas credenciales personales al repositorio. Para un despliegue público, utiliza un backend que proteja la clave y revisa las condiciones de uso del proveedor.
+
+## 📂 Estructura
 
 ```text
 AppClima/
-├── index.html
 ├── css/
 │   ├── styles.css
 │   └── tailwind.min.css
 ├── js/
 │   └── app.js
-├── README.md
-└── LICENSE (si aplica)
+├── clima.PNG
+├── index.html
+└── README.md
 ```
-
-## 🚀 Instalación y ejecución
-
-1. Clona o descarga este repositorio.
-2. Abre la carpeta del proyecto.
-3. Ejecuta un servidor local con cualquiera de estos comandos:
-
-```bash
-cd AppClima
-python -m http.server 8000
-```
-
-O bien, si prefieres usar Node:
-
-```bash
-cd AppClima
-npx serve .
-```
-
-4. Abre tu navegador en:
-
-```text
-http://localhost:8000
-```
-
-## 📲 Uso
-
-1. Escribe el nombre de la ciudad.
-2. Selecciona el país.
-3. Haz clic en "Obtener Clima".
-4. La aplicación mostrará la temperatura y sus valores máximos y mínimos.
-
-## 📸 Demo
-
-<p align="center">
-  <img src="clima.PNG" alt="foto AppClima" width="700" />
-</p>
-
-## 🔐 Configuración de la API
-
-En el archivo `js/app.js` se define la API key:
-
-```javascript
-const appID = 'TU_API_KEY';
-```
-
-Debes reemplazarla por una clave válida de OpenWeatherMap para que la aplicación funcione correctamente.
-
-## 📝 Nota
-
-Este proyecto es una excelente muestra de cómo consumir servicios externos con JavaScript puro, construir interfaces dinámicas y aprender programación frontend de una forma práctica y visual.
-
-## 💡 Autor
-
-Proyecto desarrollado como ejercicio de aprendizaje y práctica con tecnologías web modernas.
-
-
-📞 Contacto
-Para más información sobre el proyecto o servicios de desarrollo web:
-
-Proyecto: AppClima
-Desarrollador: JEB$DEV de Javier Berchtold
-Correo: j.e.b.inter@gmail.com
-Tecnologías: HTML5, CSS3, JavaScript,tailwind
 
 ## 👨‍💻 Autor
 
-**JEB$DEV** - _Desarrollador FrontEnd_
+**JEB$DEV — Javier Berchtold**
 
-- [MiGithub](https://github.com/JEB76-22?tab=repositories)
-- [MiLinkedln](https://www.linkedin.com/feed/)
+- [GitHub](https://github.com/JEB76-22)
+- [LinkedIn](https://www.linkedin.com/feed/)
+- Contacto: [j.e.b.inter@gmail.com](mailto:j.e.b.inter@gmail.com)
 
+---
+
+<p align="center">Hecho con ☀️ y JavaScript</p>
