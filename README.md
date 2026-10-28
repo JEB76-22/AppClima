@@ -12,7 +12,11 @@
   <img src="https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge" alt="OpenWeatherMap API" />
 </p>
 
-## 🌦️ Demo
+## 🚀 Demo en Vivo
+
+Puedes ver una demo en vivo del proyecto en [AppClima](https://appclima2026.netlify.app)
+
+## 🌦️ Captura
 
 <p align="center">
   <img src="./clima.PNG" alt="Captura de pantalla de AppClima mostrando el clima de Barcelona" width="720" />
