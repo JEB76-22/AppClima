@@ -90,7 +90,7 @@ http://localhost:8000
 ## 📸 Demo
 
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Demo preview" width="700" />
+  <img src="clima.PNG" alt="foto AppClima" width="700" />
 </p>
 
 ## 🔐 Configuración de la API
