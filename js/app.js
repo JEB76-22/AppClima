@@ -47,7 +47,7 @@ container.appendChild(alerta);
 };
 
 function consultarApi(ciudad, pais){
-  const appID = '13d583ad77d4ad800db03a7beb7888f1'
+  const appID = apiKey;
 
   const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=5&appid=${appID}
   `;
@@ -72,7 +72,7 @@ function consultarApi(ciudad, pais){
 };
 
 function consultarClima(latitud, longitud) {
-  const appID = '13d583ad77d4ad800db03a7beb7888f1'; 
+  const appID = apiKey;
   const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${appID}
   ` 
   spinner();//Muetra un spinner de carga
